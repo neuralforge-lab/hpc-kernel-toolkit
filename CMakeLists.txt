@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(hpc-kernel-toolkit LANGUAGES CXX HIP)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_HIP_STANDARD 17)
+add_executable(reduction kernels/reduction.hip)
+target_link_libraries(reduction hip::device)
